@@ -5,14 +5,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../animals/Animal.cpp \
+../animals/Cat.cpp \
 ../animals/Dog.cpp 
 
 OBJS += \
 ./animals/Animal.o \
+./animals/Cat.o \
 ./animals/Dog.o 
 
 CPP_DEPS += \
 ./animals/Animal.d \
+./animals/Cat.d \
 ./animals/Dog.d 
 
 
