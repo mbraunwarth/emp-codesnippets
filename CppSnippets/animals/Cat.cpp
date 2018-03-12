@@ -6,6 +6,7 @@
  */
 
 #include "Cat.h"
+#include <iostream>
 
 Cat::Cat() {
 	// TODO Auto-generated constructor stub
@@ -13,6 +14,6 @@ Cat::Cat() {
 }
 
 Cat::~Cat() {
-	// TODO Auto-generated destructor stub
+	std::cout << "Cat " << name << " left" << std::endl;
 }
 

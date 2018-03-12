@@ -6,7 +6,7 @@
  */
 
 #include "Dog.h"
-
+#include <iostream>
 
 
 // Default Constructor
@@ -23,6 +23,6 @@ Dog::Dog(int age, std::string name) {
 
 
 Dog::~Dog() {
-	// TODO Auto-generated destructor stub
+	std::cout << this->name << " left" << std::endl;
 }
 

@@ -10,10 +10,10 @@
 
 #include "Animal.h"
 
-class Cat: public Animal {
+class Cat : public Animal {
 public:
 	Cat();
-	virtual ~Cat();
+	~Cat();
 };
 
 #endif /* CAT_H_ */

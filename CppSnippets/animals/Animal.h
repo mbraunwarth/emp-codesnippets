@@ -17,7 +17,8 @@ protected:
 
 public:
 	Animal();
-	virtual ~Animal();
+	Animal(int, std::string);
+	~Animal();
 
 	/*
 	 * Getters and Setters
