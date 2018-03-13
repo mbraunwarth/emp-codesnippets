@@ -30,10 +30,10 @@
 							<tool id="de.innot.avreclipse.tool.compiler.winavr.app.debug.1158790124" name="AVR Compiler" superClass="de.innot.avreclipse.tool.compiler.winavr.app.debug">
 								<option id="de.innot.avreclipse.compiler.option.debug.level.1683009369" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level" useByScannerDiscovery="false"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.1803420129" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize" useByScannerDiscovery="false" value="de.innot.avreclipse.compiler.optimize.size" valueType="enumerated"/>
-								<option id="de.innot.avreclipse.compiler.option.incpath.1693700330" superClass="de.innot.avreclipse.compiler.option.incpath" useByScannerDiscovery="false" valueType="includePath">
+								<option id="de.innot.avreclipse.compiler.option.incpath.1693700330" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="/opt/niborobolib_304-0/src"/>
 								</option>
-								<option id="de.innot.avreclipse.compiler.option.otherflags.1720141294" superClass="de.innot.avreclipse.compiler.option.otherflags" useByScannerDiscovery="false" value="-D_NIBOBEE_" valueType="string"/>
+								<option id="de.innot.avreclipse.compiler.option.otherflags.1720141294" name="Other flags" superClass="de.innot.avreclipse.compiler.option.otherflags" useByScannerDiscovery="false" value="-D_NIBOBEE_" valueType="string"/>
 								<inputType id="de.innot.avreclipse.compiler.winavr.input.59354564" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
 							</tool>
 							<tool id="de.innot.avreclipse.tool.cppcompiler.app.debug.1504561573" name="AVR C++ Compiler" superClass="de.innot.avreclipse.tool.cppcompiler.app.debug">
@@ -41,10 +41,10 @@
 								<option id="de.innot.avreclipse.cppcompiler.option.optimize.656401239" name="Optimization Level" superClass="de.innot.avreclipse.cppcompiler.option.optimize"/>
 							</tool>
 							<tool id="de.innot.avreclipse.tool.linker.winavr.app.debug.836906834" name="AVR C Linker" superClass="de.innot.avreclipse.tool.linker.winavr.app.debug">
-								<option id="de.innot.avreclipse.linker.option.libpath.1164617655" superClass="de.innot.avreclipse.linker.option.libpath" useByScannerDiscovery="false" valueType="stringList">
+								<option id="de.innot.avreclipse.linker.option.libpath.1164617655" name="Libraries Path (-L)" superClass="de.innot.avreclipse.linker.option.libpath" useByScannerDiscovery="false" valueType="stringList">
 									<listOptionValue builtIn="false" value="/opt/niborobolib_304-0/lib/nibobee-m16-15"/>
 								</option>
-								<option id="de.innot.avreclipse.linker.option.libs.959647573" superClass="de.innot.avreclipse.linker.option.libs" useByScannerDiscovery="false" valueType="libs">
+								<option id="de.innot.avreclipse.linker.option.libs.959647573" name="Libraries (-l)" superClass="de.innot.avreclipse.linker.option.libs" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="nibobee_line"/>
 									<listOptionValue builtIn="false" value="nibobee_base"/>
 									<listOptionValue builtIn="false" value="nibobee_utils"/>
@@ -63,6 +63,10 @@
 							<tool id="de.innot.avreclipse.tool.avrdude.app.debug.1765763390" name="AVRDude" superClass="de.innot.avreclipse.tool.avrdude.app.debug"/>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="src" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -117,6 +121,10 @@
 							<tool id="de.innot.avreclipse.tool.avrdude.app.release.547610823" name="AVRDude" superClass="de.innot.avreclipse.tool.avrdude.app.release"/>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="src" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
