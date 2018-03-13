@@ -7,7 +7,7 @@
 
 #include <string.h>
 
-int main(int argc, char **argv) {
+int main_string(int argc, char **argv) {
 	char hello[] = "Hello";
 	char world[] = "World";
 	char str[20];
