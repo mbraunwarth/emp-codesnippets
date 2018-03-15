@@ -10,6 +10,9 @@
 
 #include "Animal.h"
 
+// Jede Katze ist auch ein Tier, durch die Vererbung wird bei erstellen und
+// zerstören einer Cat Instanz nicht nur der zugehörige Konstruktor/Destruktor
+// von Cat sondern auch der von Animal ausgeführt
 class Cat : public Animal {
 public:
 	Cat();

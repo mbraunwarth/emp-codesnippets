@@ -1,4 +1,7 @@
 /*
+ * Source: https://www.roboter.cc/index.php?option=com_content&view=article&id=2&catid=6
+ * Kapitel 14
+ *
  * Mit diesem Programm kann der NIBObee umherfahren. Wenn mit den Fühlern
  * Hindernisse detektiert werden, versucht der NIBObee diesen auszuweichen.
  */
@@ -9,6 +12,7 @@
 #include <nibobee/delay.h>
 #include <nibobee/sens.h>
 
+// Festlegen der eigenen Modi
 enum {
   MODE_STOP,
   MODE_DRIVE,
@@ -19,11 +23,12 @@ enum {
   MODE_AVOID_L
 };
 
+// Globale Variablen deklarieren
 int16_t speed_l;
 int16_t speed_r;
 uint16_t counter_ms;
 
-
+// Funktionen deklarieren, damit sie in der main() genutzt werden können
 uint8_t perform_check(uint8_t mode);
 
 uint8_t do_stop();
@@ -36,16 +41,21 @@ uint8_t do_avoid_l();
 
 
 int main() {
+  // Initialisierung der Motoren und Sensoren
   motpwm_init();
   sens_init();
+
   uint8_t mode;
 
   while(1==1) {
+	// Interrupts des Controllers einschalten und kurz warten
     enable_interrupts();
     delay(1);
 
+    // Modus abfragen...
     mode = perform_check(mode);
 
+    // ...erneut Modus setzen...
     switch (mode) {
       case MODE_STOP:    mode = do_stop(); break;
       case MODE_DRIVE:   mode = do_drive(); break;
@@ -56,6 +66,7 @@ int main() {
       case MODE_AVOID_L: mode = do_avoid_l(); break;
     }
 
+    // ...und dementsprechend eine Aktion ausführen
     switch (mode) {
       case MODE_STOP:    speed_l =    0; speed_r =    0; break;
       case MODE_DRIVE:   speed_l =  500; speed_r =  500; break;
@@ -66,6 +77,7 @@ int main() {
       case MODE_AVOID_L: speed_l = -600; speed_r = -400; break;
     }
 
+    // Motor seine Geschwindigkeit mitteilen
     motpwm_setLeft(speed_l);
     motpwm_setRight(speed_r);
   }

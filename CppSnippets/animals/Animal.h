@@ -10,7 +10,11 @@
 
 #include <string>
 
+/*
+ * Einfache Klassendefinition eines Tieres
+ */
 class Animal {
+// protected sorgt für Vererbung der Eigenschaften
 protected:
 	int age;
 	std::string name;

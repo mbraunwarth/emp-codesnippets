@@ -9,6 +9,8 @@
 
 int main() {
 	int n;
+	// cin nimmt Nutzereingabe auf, durch >> Operator wird die Eingabe in
+	// n gespeichert
 	std::cin >> n;
 
 	switch (n) {
