@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main_switch() {
 	int n;
 	char c = getchar();
 	n = c - '0';

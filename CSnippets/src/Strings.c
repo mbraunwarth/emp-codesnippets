@@ -7,9 +7,10 @@
 
 #include <string.h>
 
-int main_string(int argc, char **argv) {
+int main_strings(int argc, char **argv) {
+
+	char world[] = "World World World World World ";
 	char hello[] = "Hello";
-	char world[] = "World";
 	char str[20];
 
 	// Strings kopieren - strcpy(DEST, SOURCE)
@@ -17,11 +18,13 @@ int main_string(int argc, char **argv) {
 	printf("%s\n", str);
 
 	// Strings konkatenieren - strcat(FIRST, SECOND)
-	strcat(hello, world);
-	printf("%s\n", hello);
+	strcat(str, world);
+	printf("%s\n", str);
 
 	// Länge von Strings
-	int len = strlen(hello);
+	int len = strlen(str);
 	printf("Laenge: %d\n", len);
+
+	printf("%s\n", world);
 }
 

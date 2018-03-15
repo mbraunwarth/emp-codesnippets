@@ -12,7 +12,7 @@
 #include <iostream>
 
 
-int main(int argc, char **argv) {
+int main_(int argc, char **argv) {
 	// Stack initialisierung, buff wird zerstört wenn der Block endet
 	Dog buff(5, "Buffalo");
 	// Heap initialisierung (benötigt Pointer Variable)

@@ -9,7 +9,7 @@
 #include <nibobee/led.h>
 #include <nibobee/delay.h>
 
-int main() {
+int main_() {
 	// Initialisierung
 	led_init();
 
