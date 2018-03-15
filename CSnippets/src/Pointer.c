@@ -29,7 +29,7 @@ int * randomize() {
 	return &random;
 }
 
-int main_pointer(int argc, char **argv) {
+int main_pointer() {
 	// Pointer zu einer Integer Variable wird erstellt und zugewiesen
 	int* p;
 	p = randomize();

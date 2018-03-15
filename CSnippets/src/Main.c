@@ -50,7 +50,7 @@ void structs_in_stack() {
 	sit(catptr);
 }
 
-int main_(int argc, char **argv) {
+int main_() {
 
 	//structs_in_stack();
 	structs_in_heap();
